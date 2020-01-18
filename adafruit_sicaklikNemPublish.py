@@ -14,13 +14,13 @@ istemci = mqtt.Client()
 istemci.on_connect = baglanti_saglandiginda
 istemci.on_message = mesaj_geldiginde
 istemci.on_publish = onPublish
-istemci.username_pw_set("fatihmehmetergin", "aio_Lute27qoTTO9IteH5mlGLAlzL4QC") 
+istemci.username_pw_set("----USERNAME------", "------------------AIO KEY----------------------------") 
 istemci.connect("io.adafruit.com", port = 1883)
 while True:
     istemci.loop_start()
     humidity, temperature =Adafruit_DHT.read_retry(11, 2)
-    istemci.publish('fatihmehmetergin/feeds/sicaklik', temperature)
-    istemci.publish('fatihmehmetergin/feeds/nem', humidity)
+    istemci.publish('----------/feeds/sicaklik', temperature)
+    istemci.publish('----------/feeds/nem', humidity)
     led.on()
     sleep(10)
     led.off()
